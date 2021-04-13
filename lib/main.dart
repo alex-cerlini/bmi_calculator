@@ -127,7 +127,7 @@ class _MyHomePageState extends State<MyHomePage> {
               classificacao = "Obesidade Grau II (Severa)";
             } else if (imc >= 40) {
               resultado = "Seu IMC é ${imc.toStringAsPrecision(4)}";
-              classificacao = "Obesidade Grau II (Mórbida)";
+              classificacao = "Obesidade Grau III (Mórbida)";
             }
           });
         },

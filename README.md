@@ -16,8 +16,8 @@
 ## Pre-Requisites
 Before start, make sure you have GIT and a code editor of your preference, like Visual Studio Code with Dart & Flutter plugin installed.
 
-Just Clone the repository
-$ git clone https://github.com/alex-cerlini/bmi_calculator.git
+Just Clone the repository<br/>
+$ `git clone https://github.com/alex-cerlini/bmi_calculator.git`
 
 And debug the App with your code editor.
 
