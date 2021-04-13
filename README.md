@@ -1,4 +1,4 @@
-# imc_calculator
+# bmi_calculator
 <br />
 
 <p align="center">A Dart & Flutter app that calculates Body Mass Index</p>
