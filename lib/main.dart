@@ -26,13 +26,13 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  var pesoEntrada = TextEditingController();
-  var alturaEntrada = TextEditingController();
-  var peso = 0.0;
-  var altura = 0.0;
-  var imc = 0.0;
-  var resultado = "Por favor, entre com seu peso e altura";
-  var classificacao = "Aguardando dados";
+  var weightInput = TextEditingController();
+  var heightInput = TextEditingController();
+  var weight = 0.0;
+  var height = 0.0;
+  var bmi = 0.0;
+  var result = "Por favor, entre com seu peso e altura";
+  var classification = "Aguardando dados";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -46,13 +46,13 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               onPressed: () {
                 setState(() {
-                  pesoEntrada.text = "";
-                  alturaEntrada.text = "";
-                  peso = 0.0;
-                  altura = 0.0;
-                  imc = 0.0;
-                  resultado = "Por favor, entre com seu peso e altura";
-                  classificacao = "Aguardando dados";
+                  weightInput.text = "";
+                  heightInput.text = "";
+                  weight = 0.0;
+                  height = 0.0;
+                  bmi = 0.0;
+                  result = "Por favor, entre com seu peso e altura";
+                  classification = "Aguardando dados";
                 });
               }),
         ],
@@ -73,7 +73,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     borderRadius: BorderRadius.circular(20),
                   ),
                 ),
-                controller: pesoEntrada,
+                controller: weightInput,
                 keyboardType: TextInputType.numberWithOptions(),
               ),
             ),
@@ -89,45 +89,45 @@ class _MyHomePageState extends State<MyHomePage> {
                     borderRadius: BorderRadius.circular(20),
                   ),
                 ),
-                controller: alturaEntrada,
+                controller: heightInput,
                 keyboardType: TextInputType.numberWithOptions(),
               ),
             ),
-            Text(resultado),
-            Text("Classificação:  $classificacao"),
+            Text(result),
+            Text("Classificação:  $classification"),
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           setState(() {
-            if (pesoEntrada.text.isEmpty || alturaEntrada.text.isEmpty) {
+            if (weightInput.text.isEmpty || heightInput.text.isEmpty) {
               return;
             }
-            peso = double.tryParse(pesoEntrada.text);
-            altura = double.tryParse(alturaEntrada.text);
-            imc = (peso / (altura * altura)) * 10000;
+            weight = double.tryParse(weightInput.text);
+            height = double.tryParse(heightInput.text);
+            bmi = (weight / (height * height)) * 10000;
 
-            if (imc <= 0) {
-              resultado = "Por favor, entre com seu peso e altura";
-            } else if (imc > 0 && imc <= 18.5) {
-              resultado = "Seu IMC é ${imc.toStringAsPrecision(4)}";
-              classificacao = "Abaixo do peso";
-            } else if (imc >= 18.6 && imc <= 24.9) {
-              resultado = "Seu IMC é ${imc.toStringAsPrecision(4)}";
-              classificacao = "Peso ideal";
-            } else if (imc >= 25.0 && imc <= 29.9) {
-              resultado = "Seu IMC é ${imc.toStringAsPrecision(4)}";
-              classificacao = "Levemente acima do peso";
-            } else if (imc >= 30.0 && imc <= 34.9) {
-              resultado = "Seu IMC é ${imc.toStringAsPrecision(4)}";
-              classificacao = "Obesidade Grau I";
-            } else if (imc >= 35.0 && imc <= 39.9) {
-              resultado = "Seu IMC é ${imc.toStringAsPrecision(4)}";
-              classificacao = "Obesidade Grau II (Severa)";
-            } else if (imc >= 40) {
-              resultado = "Seu IMC é ${imc.toStringAsPrecision(4)}";
-              classificacao = "Obesidade Grau III (Mórbida)";
+            if (bmi <= 0) {
+              result = "Por favor, entre com seu peso e altura";
+            } else if (bmi > 0 && bmi <= 18.5) {
+              result = "Seu IMC é ${bmi.toStringAsPrecision(4)}";
+              classification = "Abaixo do peso";
+            } else if (bmi >= 18.6 && bmi <= 24.9) {
+              result = "Seu IMC é ${bmi.toStringAsPrecision(4)}";
+              classification = "Peso ideal";
+            } else if (bmi >= 25.0 && bmi <= 29.9) {
+              result = "Seu IMC é ${bmi.toStringAsPrecision(4)}";
+              classification = "Levemente acima do peso";
+            } else if (bmi >= 30.0 && bmi <= 34.9) {
+              result = "Seu IMC é ${bmi.toStringAsPrecision(4)}";
+              classification = "Obesidade Grau I";
+            } else if (bmi >= 35.0 && bmi <= 39.9) {
+              result = "Seu IMC é ${bmi.toStringAsPrecision(4)}";
+              classification = "Obesidade Grau II (Severa)";
+            } else if (bmi >= 40) {
+              result = "Seu IMC é ${bmi.toStringAsPrecision(4)}";
+              classification = "Obesidade Grau III (Mórbida)";
             }
           });
         },
