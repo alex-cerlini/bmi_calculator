@@ -95,6 +95,11 @@ class MyHomePageState extends State<MyHomePage> {
             ),
             Text(result),
             Text("Classificação:  $classification"),
+          Row(
+            children: [
+              Text('Faixa ideal'),
+            ],
+          ),
           ],
         ),
       ),
