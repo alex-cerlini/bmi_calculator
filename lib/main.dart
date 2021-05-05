@@ -96,6 +96,8 @@ class MyHomePageState extends State<MyHomePage> {
             Text(result),
             Text("Classificação:  $classification"),
           Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               ElevatedButton(onPressed: () {},
                child: Text('Faixa Ideal', style: TextStyle(color: Colors.black)),
