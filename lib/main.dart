@@ -97,10 +97,19 @@ class MyHomePageState extends State<MyHomePage> {
             Text("Classificação:  $classification"),
           Row(
             children: [
-              ElevatedButton(onPressed: () {},                
-               child: Text('Faixa Ideal'),),
-              ElevatedButton(onPressed: () {},                
-               child: Text('Calcular'),),
+              ElevatedButton(onPressed: () {},
+               child: Text('Faixa Ideal', style: TextStyle(color: Colors.black)),
+
+               style: ElevatedButton.styleFrom(
+                 primary: Color(0xFF64FEDA),
+                 ),
+               ),
+              ElevatedButton(onPressed: () {},
+               child: Text('Calcular', style: TextStyle(color: Colors.black)),
+               style: ElevatedButton.styleFrom(
+                 primary: Color(0xFF64FEDA),
+                 ),
+               ),
             ],
           ),
           ],
