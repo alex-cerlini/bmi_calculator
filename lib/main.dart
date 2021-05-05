@@ -105,8 +105,8 @@ class MyHomePageState extends State<MyHomePage> {
               children: [
                 ElevatedButton(onPressed: () {
                   height = double.tryParse(heightInput.text);
-                    weightIdeal = 18.5 * (height*height)/10000;
-                    maxWeightIdeal = 24.9 * (height*height)/10000;
+                  weightIdeal = 18.5 * (height*height)/10000;
+                  maxWeightIdeal = 24.9 * (height*height)/10000;
                    setState(() {
                     result = "Seu peso ideal é entre ${weightIdeal.toStringAsPrecision(4)}kg e ${maxWeightIdeal.toStringAsPrecision(4)}kg";
                     classification = "-";
