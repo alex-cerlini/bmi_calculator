@@ -99,7 +99,6 @@ class MyHomePageState extends State<MyHomePage> {
             children: [
               ElevatedButton(onPressed: () {},
                child: Text('Faixa Ideal', style: TextStyle(color: Colors.black)),
-
                style: ElevatedButton.styleFrom(
                  primary: Color(0xFF64FEDA),
                  ),
