@@ -107,20 +107,7 @@ class MyHomePageState extends State<MyHomePage> {
                    primary: Color(0xFF64FEDA),
                    ),
                  ),
-                ElevatedButton(onPressed: () {},
-                 child: Text('Calcular', style: TextStyle(color: Colors.black)),
-                 style: ElevatedButton.styleFrom(
-                   primary: Color(0xFF64FEDA),
-                   ),
-                 ),
-              ],
-            ),
-          ),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
+                ElevatedButton(onPressed: () {
           setState(() {
             if (weightInput.text.isEmpty || heightInput.text.isEmpty) {
               return;
@@ -152,7 +139,16 @@ class MyHomePageState extends State<MyHomePage> {
             }
           });
         },
-        child: Icon(Icons.calculate),
+                 child: Text('Calcular', style: TextStyle(color: Colors.black)),
+                 style: ElevatedButton.styleFrom(
+                   primary: Color(0xFF64FEDA),
+                   ),
+                 ),
+              ],
+            ),
+          ),
+          ],
+        ),
       ),
     );
   }
