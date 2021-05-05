@@ -29,6 +29,8 @@ class MyHomePageState extends State<MyHomePage> {
   var weightInput = TextEditingController();
   var heightInput = TextEditingController();
   var weight = 0.0;
+  var weightIdeal = 0.0;
+  var maxWeightIdeal = 0.0;
   var height = 0.0;
   var bmi = 0.0;
   var result = "Por favor, entre com seu peso e altura";
@@ -93,7 +95,7 @@ class MyHomePageState extends State<MyHomePage> {
                 keyboardType: TextInputType.numberWithOptions(),
               ),
             ),
-            Text(result),
+            Text("$result"),
             Text("Classificação:  $classification"),
           Padding(
             padding: const EdgeInsets.all(20.0),
@@ -101,7 +103,15 @@ class MyHomePageState extends State<MyHomePage> {
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                ElevatedButton(onPressed: () {},
+                ElevatedButton(onPressed: () {
+                  height = double.tryParse(heightInput.text);
+                    weightIdeal = 18.5 * (height*height)/10000;
+                    maxWeightIdeal = 24.9 * (height*height)/10000;
+                   setState(() {
+                    result = "Seu peso ideal é entre ${weightIdeal.toStringAsPrecision(4)}kg e ${maxWeightIdeal.toStringAsPrecision(4)}kg";
+                    classification = "-";
+                   });
+                },
                  child: Text('Faixa Ideal', style: TextStyle(color: Colors.black)),
                  style: ElevatedButton.styleFrom(
                    primary: Color(0xFF64FEDA),
