@@ -95,23 +95,26 @@ class MyHomePageState extends State<MyHomePage> {
             ),
             Text(result),
             Text("Classificação:  $classification"),
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              ElevatedButton(onPressed: () {},
-               child: Text('Faixa Ideal', style: TextStyle(color: Colors.black)),
-               style: ElevatedButton.styleFrom(
-                 primary: Color(0xFF64FEDA),
+          Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                ElevatedButton(onPressed: () {},
+                 child: Text('Faixa Ideal', style: TextStyle(color: Colors.black)),
+                 style: ElevatedButton.styleFrom(
+                   primary: Color(0xFF64FEDA),
+                   ),
                  ),
-               ),
-              ElevatedButton(onPressed: () {},
-               child: Text('Calcular', style: TextStyle(color: Colors.black)),
-               style: ElevatedButton.styleFrom(
-                 primary: Color(0xFF64FEDA),
+                ElevatedButton(onPressed: () {},
+                 child: Text('Calcular', style: TextStyle(color: Colors.black)),
+                 style: ElevatedButton.styleFrom(
+                   primary: Color(0xFF64FEDA),
+                   ),
                  ),
-               ),
-            ],
+              ],
+            ),
           ),
           ],
         ),
