@@ -44,6 +44,10 @@ class MyHomePageState extends State<MyHomePage> {
             DrawerHeader(
               child: Text("Test Header"),
             ),
+            ListTile(
+              title: Text("Item 1"),
+              onTap: () {},
+            ),
           ],
         ),
       ),
