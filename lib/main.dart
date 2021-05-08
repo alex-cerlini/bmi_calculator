@@ -38,6 +38,7 @@ class MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: Drawer(child: ListView(children: [DrawerHeader(child: Text("Test Header"))],),),
       appBar: AppBar(
         title: Text(widget.title),
         actions: <Widget>[
