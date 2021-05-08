@@ -1,3 +1,4 @@
+import 'package:calculadora_de_imc/views/about_view.dart';
 import 'package:flutter/material.dart';
 
 void main() {
