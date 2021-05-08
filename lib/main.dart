@@ -46,7 +46,18 @@ class MyHomePageState extends State<MyHomePage> {
             ),
             ListTile(
               title: Text("Item 1"),
-              onTap: () {},
+              onTap: () {
+                showDialog(
+                  context: context,
+                  builder: (BuildContext context) {
+                    return AlertDialog(
+                      content: Container(
+                        child: Text("Abrir página SOBRE ao invés do Dialogo"),
+                      ),
+                    );
+                  },
+                );
+              },
             ),
           ],
         ),
