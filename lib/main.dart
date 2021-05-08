@@ -45,7 +45,7 @@ class MyHomePageState extends State<MyHomePage> {
               child: Center(child: Text("Menu")),
             ),
             ListTile(
-              title: Text("Item 1"),
+              title: Text("Sobre"),
               onTap: () {
                 showDialog(
                   context: context,
