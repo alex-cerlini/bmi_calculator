@@ -8,8 +8,10 @@ class AboutViewWidget extends StatefulWidget {
 class AboutViewWidgetState extends State<AboutViewWidget> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Text("Message Text"),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Calculadora de IMC"),
+      ),
     );
   }
 }
