@@ -38,7 +38,15 @@ class MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: Drawer(child: ListView(children: [DrawerHeader(child: Text("Test Header"))],),),
+      drawer: Drawer(
+        child: ListView(
+          children: [
+            DrawerHeader(
+              child: Text("Test Header"),
+            ),
+          ],
+        ),
+      ),
       appBar: AppBar(
         title: Text(widget.title),
         actions: <Widget>[
@@ -98,66 +106,72 @@ class MyHomePageState extends State<MyHomePage> {
             ),
             Text("$result"),
             Text("Classificação:  $classification"),
-          Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                ElevatedButton(onPressed: () {
-                  height = double.tryParse(heightInput.text);
-                  weightIdeal = 18.5 * (height*height)/10000;
-                  maxWeightIdeal = 24.9 * (height*height)/10000;
-                   setState(() {
-                    result = "Seu peso ideal é entre ${weightIdeal.toStringAsPrecision(4)}kg e ${maxWeightIdeal.toStringAsPrecision(4)}kg";
-                    classification = "-";
-                   });
-                },
-                 child: Text('Faixa Ideal', style: TextStyle(color: Colors.black)),
-                 style: ElevatedButton.styleFrom(
-                   primary: Color(0xFF64FEDA),
-                   ),
-                 ),
-                ElevatedButton(onPressed: () {
-          setState(() {
-            if (weightInput.text.isEmpty || heightInput.text.isEmpty) {
-              return;
-            }
-            weight = double.tryParse(weightInput.text);
-            height = double.tryParse(heightInput.text);
-            bmi = (weight / (height * height)) * 10000;
+            Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  ElevatedButton(
+                    onPressed: () {
+                      height = double.tryParse(heightInput.text);
+                      weightIdeal = 18.5 * (height * height) / 10000;
+                      maxWeightIdeal = 24.9 * (height * height) / 10000;
+                      setState(() {
+                        result =
+                            "Seu peso ideal é entre ${weightIdeal.toStringAsPrecision(4)}kg e ${maxWeightIdeal.toStringAsPrecision(4)}kg";
+                        classification = "-";
+                      });
+                    },
+                    child: Text('Faixa Ideal',
+                        style: TextStyle(color: Colors.black)),
+                    style: ElevatedButton.styleFrom(
+                      primary: Color(0xFF64FEDA),
+                    ),
+                  ),
+                  ElevatedButton(
+                    onPressed: () {
+                      setState(() {
+                        if (weightInput.text.isEmpty ||
+                            heightInput.text.isEmpty) {
+                          return;
+                        }
+                        weight = double.tryParse(weightInput.text);
+                        height = double.tryParse(heightInput.text);
+                        bmi = (weight / (height * height)) * 10000;
 
-            if (bmi <= 0) {
-              result = "Por favor, entre com seu peso e altura";
-            } else if (bmi > 0 && bmi <= 18.5) {
-              result = "Seu IMC é ${bmi.toStringAsPrecision(4)}";
-              classification = "Abaixo do peso";
-            } else if (bmi >= 18.6 && bmi <= 24.9) {
-              result = "Seu IMC é ${bmi.toStringAsPrecision(4)}";
-              classification = "Peso ideal";
-            } else if (bmi >= 25.0 && bmi <= 29.9) {
-              result = "Seu IMC é ${bmi.toStringAsPrecision(4)}";
-              classification = "Levemente acima do peso";
-            } else if (bmi >= 30.0 && bmi <= 34.9) {
-              result = "Seu IMC é ${bmi.toStringAsPrecision(4)}";
-              classification = "Obesidade Grau I";
-            } else if (bmi >= 35.0 && bmi <= 39.9) {
-              result = "Seu IMC é ${bmi.toStringAsPrecision(4)}";
-              classification = "Obesidade Grau II (Severa)";
-            } else if (bmi >= 40) {
-              result = "Seu IMC é ${bmi.toStringAsPrecision(4)}";
-              classification = "Obesidade Grau III (Mórbida)";
-            }
-          });
-        },
-                 child: Text('Calcular', style: TextStyle(color: Colors.black)),
-                 style: ElevatedButton.styleFrom(
-                   primary: Color(0xFF64FEDA),
-                   ),
-                 ),
-              ],
+                        if (bmi <= 0) {
+                          result = "Por favor, entre com seu peso e altura";
+                        } else if (bmi > 0 && bmi <= 18.5) {
+                          result = "Seu IMC é ${bmi.toStringAsPrecision(4)}";
+                          classification = "Abaixo do peso";
+                        } else if (bmi >= 18.6 && bmi <= 24.9) {
+                          result = "Seu IMC é ${bmi.toStringAsPrecision(4)}";
+                          classification = "Peso ideal";
+                        } else if (bmi >= 25.0 && bmi <= 29.9) {
+                          result = "Seu IMC é ${bmi.toStringAsPrecision(4)}";
+                          classification = "Levemente acima do peso";
+                        } else if (bmi >= 30.0 && bmi <= 34.9) {
+                          result = "Seu IMC é ${bmi.toStringAsPrecision(4)}";
+                          classification = "Obesidade Grau I";
+                        } else if (bmi >= 35.0 && bmi <= 39.9) {
+                          result = "Seu IMC é ${bmi.toStringAsPrecision(4)}";
+                          classification = "Obesidade Grau II (Severa)";
+                        } else if (bmi >= 40) {
+                          result = "Seu IMC é ${bmi.toStringAsPrecision(4)}";
+                          classification = "Obesidade Grau III (Mórbida)";
+                        }
+                      });
+                    },
+                    child:
+                        Text('Calcular', style: TextStyle(color: Colors.black)),
+                    style: ElevatedButton.styleFrom(
+                      primary: Color(0xFF64FEDA),
+                    ),
+                  ),
+                ],
+              ),
             ),
-          ),
           ],
         ),
       ),
