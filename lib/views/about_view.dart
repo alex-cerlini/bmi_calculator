@@ -12,6 +12,19 @@ class AboutViewWidgetState extends State<AboutViewWidget> {
       appBar: AppBar(
         title: Text("Calculadora de IMC"),
       ),
+      body: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(30.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text("Calculadora de IMC v0.0.3"),
+              ],
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
