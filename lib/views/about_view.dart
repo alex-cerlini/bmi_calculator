@@ -19,6 +19,9 @@ class AboutViewWidgetState extends State<AboutViewWidget> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                Image(
+                  image: AssetImage('dev_assets/icone_calculadora_de_imc.png'),
+                ),
                 Text("Calculadora de IMC v0.0.3"),
               ],
             ),
