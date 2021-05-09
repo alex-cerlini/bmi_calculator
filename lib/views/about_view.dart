@@ -17,7 +17,7 @@ class AboutViewWidgetState extends State<AboutViewWidget> {
           Padding(
             padding: const EdgeInsets.all(30.0),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 ClipRRect(
                   borderRadius: BorderRadius.circular(30.0),
