@@ -27,7 +27,7 @@ class AboutViewWidgetState extends State<AboutViewWidget> {
                     height: 75,
                   ),
                 ),
-                Text("Calculadora de IMC v0.0.3"),
+                Text("Calculadora de IMC v0.0.4"),
               ],
             ),
           ),
