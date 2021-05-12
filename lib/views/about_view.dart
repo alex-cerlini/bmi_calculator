@@ -34,7 +34,8 @@ class AboutViewWidgetState extends State<AboutViewWidget> {
           Divider(
             color: Color(0xFF959595),
           ),
-          Text("Feito com amor ❤️\npor Alexander Andrade Cerlini"),
+          Text("Feito com amor ❤️\npor Alexander Andrade Cerlini",
+              textAlign: TextAlign.center),
         ],
       ),
     );
