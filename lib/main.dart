@@ -47,6 +47,7 @@ class MyHomePageState extends State<MyHomePage> {
             ),
             ListTile(
               title: Text("Sobre"),
+              leading: Icon(Icons.info),
               onTap: () {
                 Navigator.push(
                   context,
