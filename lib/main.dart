@@ -43,7 +43,9 @@ class MyHomePageState extends State<MyHomePage> {
         child: ListView(
           children: [
             DrawerHeader(
-              child: Center(child: Text("Menu")),
+              child: Center(
+                child: Text("Menu"),
+              ),
             ),
             ListTile(
               title: Text("Sobre"),
