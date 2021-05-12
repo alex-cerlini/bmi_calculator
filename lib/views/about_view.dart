@@ -31,6 +31,9 @@ class AboutViewWidgetState extends State<AboutViewWidget> {
               ],
             ),
           ),
+          Divider(
+            color: Color(0xFF959595),
+          ),
         ],
       ),
     );
