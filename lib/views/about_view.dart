@@ -22,6 +22,7 @@ class AboutViewWidgetState extends State<AboutViewWidget> {
               children: [
                 ClipRRect(
                   borderRadius: BorderRadius.circular(30.0),
+                  clipBehavior: Clip.hardEdge,
                   child: Image(
                     image:
                         AssetImage('dev_assets/icone_calculadora_de_imc.png'),
