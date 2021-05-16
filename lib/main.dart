@@ -1,5 +1,6 @@
 import 'package:calculadora_de_imc/views/about_view.dart';
 import 'package:flutter/material.dart';
+import 'package:splashscreen/splashscreen.dart';
 
 void main() {
   runApp(MyApp());
@@ -12,7 +13,26 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Calculadora de IMC',
       theme: ThemeData.dark(),
-      home: MyHomePage(title: 'Calculadora de IMC'),
+      home: SplashScreenClass(),
+    );
+  }
+}
+
+class SplashScreenClass extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return SplashScreen(
+      seconds: 4,
+      navigateAfterSeconds: new MyHomePage(title: 'Calculadora de IMC'),
+      image: Image.asset("dev_assets/icone_calculadora_de_imc.png"),
+      backgroundColor: Color(0xFFFF914D),
+      useLoader: true,
+      loadingText: Text(
+        "Carregando App",
+        style: TextStyle(color: Colors.white),
+      ),
+      photoSize: 160.0,
+      loaderColor: Colors.white,
     );
   }
 }
