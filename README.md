@@ -11,7 +11,7 @@
 
 - [x] Receive data from user and return BMI index.
 - [x] Return too BMI classification
-- [ ] Drawer with another section like about and "See your ideal weight"
+- [X] Ideal weight range button working
 
 ## Pre-Requisites
 Before start, make sure you have GIT and a code editor of your preference, like Visual Studio Code with Dart & Flutter plugin installed.
