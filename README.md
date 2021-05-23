@@ -33,14 +33,10 @@
 
 ---
 
-## Pre-Requisites
+### Pre-requisites
 
-Before start, make sure you have GIT and a code editor of your preference, like Visual Studio Code with Dart & Flutter plugin installed.
-
-Just Clone the repository<br/>
-$ `git clone https://github.com/alex-cerlini/bmi_calculator.git`
-
-And debug the App with your code editor.
+- Install [Flutter SDK](https://flutter.dev/docs/get-started/install).
+- Setup your [favorite code editor](https://flutter.dev/docs/get-started/editor) (I recommend using [VS Code](https://code.visualstudio.com/))
 
 ---
 
