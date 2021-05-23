@@ -18,6 +18,21 @@
 
 ---
 
+## App Preview
+
+<p>
+<img src="dev_assets/prints/Print1.jpg" width="150" style="margin-right: 30px; margin-top: 20px">
+<img src="dev_assets/prints/Print2.jpg" width="150" style="margin-right: 30px; margin-top: 20px">
+<img src="dev_assets/prints/Print3.jpg" width="150" style="margin-right: 30px; margin-top: 20px">
+</p>
+<p>
+<img src="dev_assets/prints/Print4.jpg" width="150" style="margin-right: 30px; margin-top: 20px">
+<img src="dev_assets/prints/Print5.jpg" width="150" style="margin-right: 30px; margin-top: 20px">
+<img src="dev_assets/prints/Print6.jpg" width="150" style="margin-right: 30px; margin-top: 20px">
+</p>
+
+---
+
 ## Pre-Requisites
 
 Before start, make sure you have GIT and a code editor of your preference, like Visual Studio Code with Dart & Flutter plugin installed.
