@@ -40,6 +40,12 @@
 
 ---
 
+### Clone the repo
+
+    git clone git@github.com:alex-cerlini/eLocations.git
+
+---
+
 ## Technology
 
 - Dart
