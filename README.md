@@ -33,6 +33,15 @@
 
 ---
 
+## Developer Quick start
+
+1. [Install Pre-requisites](#pre-requisites)
+1. [Clone](#clone-the-repo)
+1. [Download third party libs](#download-third-party-libs)
+1. [Run bmi_calculator](#run-bmi_calculator-on-a-device-or-simulator)
+
+---
+
 ### Pre-requisites
 
 - Install [Flutter SDK](https://flutter.dev/docs/get-started/install).
