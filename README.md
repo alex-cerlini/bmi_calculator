@@ -42,7 +42,7 @@
 
 ### Clone the repo
 
-    git clone git@github.com:alex-cerlini/eLocations.git
+    git clone https://github.com/alex-cerlini/bmi_calculator.git
 
 ---
 
