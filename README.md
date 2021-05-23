@@ -52,6 +52,14 @@
 
 ---
 
+### Run bmi_calculator on a device or simulator
+
+- Run `flutter run` with a device attached to your computer or an open simulator
+  or
+- Use your editor command to run the app (F5 in Visual Studio Code)
+
+---
+
 ## Technology
 
 - Dart
