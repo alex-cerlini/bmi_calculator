@@ -42,7 +42,13 @@
 
 ### Clone the repo
 
-    git clone https://github.com/alex-cerlini/bmi_calculator.git
+    git clone git@github.com:alex-cerlini/bmi_calculator.git
+
+---
+
+### Download Third Party Libs
+
+1. run `flutter packages get` to download all the librarys used in project
 
 ---
 
