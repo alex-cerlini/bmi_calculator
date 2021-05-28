@@ -57,7 +57,7 @@
 
 ### Download Third Party Libs
 
-1. run `flutter packages get` to download all the librarys used in project
+1. run `flutter packages get` to download all the librarys used in project (do it or have a million error in project)
 
 ---
 
