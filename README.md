@@ -15,6 +15,7 @@
 - [x] Receive data from user and return BMI index.
 - [x] Return too BMI classification
 - [x] Ideal weight range button working
+- [x] About page in Drawer
 
 ---
 
